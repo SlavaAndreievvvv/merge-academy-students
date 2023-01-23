@@ -1,9 +1,9 @@
 @use 'utils';
 
 .title {
-  text-align: center;
-  @include utils.text(utils.rem(32px), 700, utils.$color-white);
+  font-family: 'VT323', sans-serif;
+  @include utils.text(utils.rem(24px), 400, #303030);
   @include utils.media('tablet') {
-    font-size: utils.rem(42px);
+    font-size: utils.rem(50px);
   }
 }

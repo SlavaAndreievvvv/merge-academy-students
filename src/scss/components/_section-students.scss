@@ -1,0 +1,18 @@
+@use 'utils';
+
+.section-students {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__header {
+    height: 112px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E7E6E6;
+    @include utils.media('tablet') {
+      padding-left: 66px;
+    }
+  }
+}
