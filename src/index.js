@@ -40,10 +40,10 @@ const students = [
 ]
 
 
-let studentsContainer = document.querySelector('.students');
+let $studentsContainer = document.querySelector('.students');
 
 students.reverse().map(user => { 
-  return studentsContainer.insertAdjacentHTML('afterbegin', `
+  return $studentsContainer.insertAdjacentHTML('afterbegin', `
   <div class="students__card card">
     <div class="card__wrapper-name">
       <img class="card__icon" src="${user.photo}" />
