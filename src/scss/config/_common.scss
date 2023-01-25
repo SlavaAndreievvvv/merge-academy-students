@@ -12,17 +12,18 @@
 html {
   font-size: v.$base-font-size;
   background-color: v.$color-white;
-  transition: all 1s ease;
 }
 
 .dark-mode {
   color: v.$color-white;
   background-color: black;
+  transition: all 1s ease;
 }
 
 body {
   font-family: v.$primary-font;
   min-height: 100vh;
+  transition: all 1s ease;
 }
 
 
