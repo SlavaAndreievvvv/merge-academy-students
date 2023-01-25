@@ -1,8 +1,17 @@
 @use 'utils';
 
 .title {
+  transition: all 1s ease;
   font-family: 'VT323', sans-serif;
   @include utils.text(utils.rem(24px), 400, #303030);
+  @include utils.media('tablet') {
+    font-size: utils.rem(50px);
+  }
+}
+
+.dark-mode h1 {
+  font-family: 'VT323', sans-serif;
+  @include utils.text(utils.rem(24px), 400, white);
   @include utils.media('tablet') {
     font-size: utils.rem(50px);
   }

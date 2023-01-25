@@ -13,6 +13,15 @@
     border-bottom: 1px solid #E7E6E6;
     @include utils.media('tablet') {
       padding-left: 66px;
+      padding-right: 45px;
     }
+  }
+  &__header-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
