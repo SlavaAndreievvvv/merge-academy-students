@@ -69,9 +69,12 @@
     letter-spacing: 0.02em;
     color: #989191;
     margin-left: 3px;
-    transition: all 1s ease;
+    transition: all .2s ease;
     @include utils.media('tablet') {
       font-size: utils.rem(14px);
+  }
+  &:hover {
+    color: rgb(23, 19, 40);
   }
   }
   &__github {
@@ -127,6 +130,9 @@
     @include utils.media('tablet') {
       font-size: utils.rem(14px);
 }}
+.dark-mode .card__email:hover {
+  color: rgb(231, 230, 236);
+}
 .dark-mode .card__img {
     width: 20px;
     height: 20px;
