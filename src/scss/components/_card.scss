@@ -63,6 +63,8 @@
     }
   }
   &__email {
+    display: flex;
+    flex-direction: row;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -75,7 +77,14 @@
   }
   &:hover {
     color: rgb(23, 19, 40);
+    & > .card__email-img {
+      fill: rgb(23, 19, 40);
+    }
   }
+  }
+  &__email-img {
+    margin-right: 4px;
+    fill: #636262;
   }
   &__github {
     width: 20px;
@@ -132,6 +141,9 @@
 }}
 .dark-mode .card__email:hover {
   color: rgb(231, 230, 236);
+}
+.dark-mode .card__email:hover > .card__email-img {
+  fill: rgb(231, 230, 236);
 }
 .dark-mode .card__img {
     width: 20px;
