@@ -66,7 +66,10 @@ let $studentsContainer = document.querySelector('.students');
 
 students.reverse().map(user => { 
   return $studentsContainer.insertAdjacentHTML('afterbegin', `
-  <div class="card">
+  <div data-aos="fade-up"
+      data-aos-duration="3000"
+      data-aos-delay="1000" 
+      class="card">
     <div class="card__wrapper-name">
       <img class="card__icon" src="${user.photo}" />
       <div class="card__inner">
