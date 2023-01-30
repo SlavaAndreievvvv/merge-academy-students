@@ -11,6 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  transition: all 1s ease;
   @include utils.media('tablet') {
     padding: 0 24px;
   }
@@ -27,6 +28,7 @@
     justify-content: center;
     align-items: center;
     padding-left: 17px;
+    transition: all 1s ease;
     @include utils.media('tablet') {
       padding-left: 24px;
     }
@@ -61,15 +63,28 @@
     }
   }
   &__email {
+    display: flex;
+    flex-direction: row;
     font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.02em;
-  color: #989191;
-  margin-left: 3px;
-  @include utils.media('tablet') {
-    font-size: utils.rem(14px);
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #989191;
+    margin-left: 3px;
+    transition: all .2s ease;
+    @include utils.media('tablet') {
+      font-size: utils.rem(14px);
   }
+  &:hover {
+    color: rgb(23, 19, 40);
+    & > .card__email-img {
+      fill: rgb(23, 19, 40);
+    }
+  }
+  }
+  &__email-img {
+    margin-right: 4px;
+    fill: #636262;
   }
   &__github {
     width: 20px;
@@ -82,9 +97,71 @@
   &__img {
     width: 20px;
     height: 20px;
+    fill: #1c1c1c;
     @include utils.media('tablet') {
       width: 32px;
       height: 32px;
     }
   }
+}
+
+.dark-mode .card {
+  background-color: #292D32;
+  width: 480px;
+  padding: 0 16px;
+  height: 104px;
+  border: 1px solid #8A8E97;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include utils.media('tablet') {
+    padding: 0 24px;
+  }
+}
+
+.dark-mode .card__name {
+  letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    @include utils.text(utils.rem(14px), 500, white);
+    @include utils.media('tablet') {
+      font-size: utils.rem(16px);
+    }
+}
+.dark-mode .card__email{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #A29B9B;
+    margin-left: 3px;
+    @include utils.media('tablet') {
+      font-size: utils.rem(14px);
+}}
+.dark-mode .card__email:hover {
+  color: rgb(231, 230, 236);
+}
+.dark-mode .card__email:hover > .card__email-img {
+  fill: rgb(231, 230, 236);
+}
+.dark-mode .card__img {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    @include utils.media('tablet') {
+      width: 32px;
+      height: 32px;
+    }
+}
+.dark-mode .card__wrapper-github {
+    height: 100%;
+    border-left: 1px solid #8A8E97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 17px;
+    @include utils.media('tablet') {
+      padding-left: 24px;
+    }
 }
