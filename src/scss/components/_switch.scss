@@ -2,60 +2,67 @@
 
 .switch {
 position: relative;
-height: 16px;
-width: 34px;
-background: #B1B0BD;
-border-radius: 15px;
-margin-right: 48px;
-margin-left: 52px;
 cursor: pointer;
  
+&__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:focus ~ .switch__button {
+    border-color: #6C8BFF;
+  }
+  &:checked ~ .switch__button {
+    background-color: #6C8BFF;
+  }
+  &:checked ~ .switch__button .switch__dot {
+    left: 20px;
+    background-color: #3860F9;
+  }
+}
 &__button {
-  top: -1px;
-  left: -1px;
+  position: relative;
+  display: block;
+  height: 16px;
+  width: 34px;
+  background: #B1B0BD;
+  border-radius: 15px;
+  margin-right: 30px;
+  margin-left: 19px;
+
+  @include utils.media('tablet') {
+    margin-right: 86px;
+  }
+  }
+  &__dot {
+  position: absolute;
+  transition: all 0.3s ease;
+  display: block;
   width: 20px;
   height: 20px;
-  position: absolute;
-  background: #FDFDFD;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0px 0.1px 0.3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  transition: all .5s ease;
+  top: -2px;
+  left: -4px;
+  box-shadow: 0px 0.1px 0.3px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.2);
   }
   &__light {
     fill: #3860F9;
     position: absolute;
     top: -4px;
-    left: -32px;
+    left: -16px;
     transition: all .5s ease;
   }
   &__dark {
       fill: #D9D8E5;
       position: absolute;
       top: -4px;
-      left: 40px;
+      left: 66px;
       transition: all .5s ease;
   }
 }
 
-
-.dark-mode .switch {
-  position: relative;
-  height: 16px;
-  width: 34px;
-  background: #6C8BFF;
-  border-radius: 15px;
-}
-
-.dark-mode .switch__button {
-  top: -1px;
-  left: 16px;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  background: #3860F9;
-  border-radius: 50%;
-  box-shadow: 0px 0.1px 0.3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.2);
-}
 .dark-mode .switch__light {
   fill: #575663;
 }

@@ -1,17 +1,26 @@
 'use strict';
 
-function darkMode() {
-  const wasDarkMode = localStorage.getItem('darkmode') === 'true';
+let switcher = document.querySelector('[type="checkbox"]');
+
+function onThemeChange() {
+  const wasDarkMode = localStorage.getItem('onThemeChange') === 'true';
   const $body = document.querySelector('body');
 
-  localStorage.setItem('darkmode', !wasDarkMode)
+  localStorage.setItem('onThemeChange', !wasDarkMode)
   $body.classList.toggle('dark-mode', !wasDarkMode)
 };
 
-document.querySelector('.switch').addEventListener('click', darkMode);
+switcher.addEventListener('change', (event) => {
+  if (event.target.checked) {
+    onThemeChange().remove();
+  }
+  else {
+    onThemeChange();
+  }
+})
 
 function onLoad() {
-  document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true' )
+  document.body.classList.toggle('dark-mode', localStorage.getItem('onThemeChange') === 'true' )
 };
 
 document.addEventListener('DOMContentLoaded', onLoad);
