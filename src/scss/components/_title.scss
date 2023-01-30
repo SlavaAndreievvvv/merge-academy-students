@@ -1,0 +1,9 @@
+@use 'utils';
+
+.title {
+  font-family: 'VT323', sans-serif;
+  @include utils.text(utils.rem(24px), 400, #303030);
+  @include utils.media('tablet') {
+    font-size: utils.rem(50px);
+  }
+}

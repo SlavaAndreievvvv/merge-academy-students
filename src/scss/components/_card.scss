@@ -1,0 +1,90 @@
+@use 'utils';
+
+.card {
+  width: 480px;
+  padding: 0 16px;
+  height: 104px;
+  background: #FBFBFB;
+  border: 1px solid #EFEDED;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include utils.media('tablet') {
+    padding: 0 24px;
+  }
+
+  &__wrapper-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__wrapper-github {
+    height: 100%;
+    border-left: 1px solid #EFEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 17px;
+    @include utils.media('tablet') {
+      padding-left: 24px;
+    }
+  }
+  &__wrapper-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon  {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    @include utils.media('tablet') {
+      width: 56px;
+      height: 56px;
+      margin-right: 24px;
+    }
+  }
+  &__name {
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    @include utils.text(utils.rem(14px), 500, #302F2F);
+    @include utils.media('tablet') {
+      font-size: utils.rem(16px);
+    }
+  }
+  &__email {
+    font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: #989191;
+  margin-left: 3px;
+  @include utils.media('tablet') {
+    font-size: utils.rem(14px);
+  }
+  }
+  &__github {
+    width: 20px;
+    height: 20px;
+    @include utils.media('tablet') {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__img {
+    width: 20px;
+    height: 20px;
+    @include utils.media('tablet') {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
