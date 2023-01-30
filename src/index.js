@@ -40,7 +40,7 @@ const students = [
 ]
 
 
-let $studentsContainer = document.querySelector('.students');
+let $studentsContainer = document.querySelector('#students');
 
 students.reverse().map(user => { 
   return $studentsContainer.insertAdjacentHTML('afterbegin', `
